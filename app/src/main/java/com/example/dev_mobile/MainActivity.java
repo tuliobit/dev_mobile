@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         imageView = findViewById(R.id.imageView);
         tvResultado = findViewById(R.id.tvResultado);
 
+        edPeso.setText(getIntent().getExtras().getString("edPeso"));
+
     }
 
     public void calculaIMC(View view) {
