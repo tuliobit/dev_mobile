@@ -13,12 +13,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="IMC" />
+        android:text="IMC"
+        android:textSize="60sp" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="232dp"
+        android:src="@drawable/perfil"
         app:srcCompat="@drawable/perfil" />
 
     <LinearLayout
@@ -34,14 +36,13 @@
             android:text="Peso" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/edPeso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:hint="0.0"
-            android:inputType="textPersonName"
-            android:text="0.0" />
+            android:inputType="textPersonName" />
 
     </LinearLayout>
 
@@ -57,22 +58,29 @@
             android:text="Altura" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/edAltura"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:hint="0.0"
-            android:inputType="textPersonName"
-            android:text="0.0" />
+            android:inputType="textPersonName" />
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView4"
+    <Button
+        android:id="@+id/botaoCalcula"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="4"
-        android:text="TextView" />
+        android:layout_height="58dp"
+        android:onClick="calculaIMC"
+        android:text="Calcular" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="---"
+        android:textSize="60sp" />
 
 </LinearLayout>
