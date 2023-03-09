@@ -18,7 +18,16 @@ public class SlideShow extends AppCompatActivity {
         position = 0;
     }
 
+    public void last() {
+        position--;
+        imageView.setImageResource(imagens[position]);
+    }
+    public void home() {
+        position=0;
+        imageView.setImageResource(imagens[position]);
+    }
     public void next() {
         position++;
+        imageView.setImageResource(imagens[position]);
     }
 }
