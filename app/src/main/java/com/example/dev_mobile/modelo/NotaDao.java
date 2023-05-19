@@ -25,6 +25,17 @@ public class NotaDao {
         return n;
     }
 
+    public int alterarNota(Nota n) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("titulo", n.getTitulo());
+        contentValues.put("texto", n.getTexto());
+        return db.update("notas", contentValues, "id=?", new String[]{String.valueOf(n.getId())});
+    }
+
+    public int deleteNota(int id) {
+        return db.delete("notas", "id=?", new String[]{String.valueOf(id)});
+    }
+
     public ArrayList<Nota> getListaNotas() {
         Cursor cursor = db.rawQuery("SELECT * FROM notas", null);
         cursor.moveToFirst();
@@ -35,5 +46,13 @@ public class NotaDao {
             cursor.moveToNext();
         }
         return arrayList;
+    }
+
+    public Nota getNotaById(int id) {
+        Cursor cursor = db.rawQuery("SELECT * FROM notas WHERE id = ?", new String[]{String.valueOf(id)});
+        if (cursor!= null && cursor.moveToFirst()) {
+            return new Nota(cursor.getInt(0), cursor.getString(1), cursor.getString(2));
+        }
+        return null;
     }
 }

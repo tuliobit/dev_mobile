@@ -19,6 +19,12 @@ public class NotaController {
         return notaDao.inserirNota(n);
     }
 
+    public int editarNota(Nota n) {
+        return notaDao.alterarNota(n);
+    }
+    public int deletarNota(int id) {
+        return notaDao.deleteNota(id);
+    }
     public ArrayList<Nota> listaNotas() {
         return notaDao.getListaNotas();
     }
@@ -29,5 +35,9 @@ public class NotaController {
             result.add(nota.getTitulo());
         }
         return result;
+    }
+
+    public Nota buscaNotaPorId(int id) {
+        return notaDao.getNotaById(id);
     }
 }
