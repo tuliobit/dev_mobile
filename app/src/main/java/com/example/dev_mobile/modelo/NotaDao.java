@@ -29,13 +29,11 @@ public class NotaDao {
         Cursor cursor = db.rawQuery("SELECT * FROM notas", null);
         cursor.moveToFirst();
         ArrayList<Nota> arrayList = new ArrayList<>();
-        while (cursor.isAfterLast()) {
-
-            arrayList.add( new Nota(
-                    cursor.getInt(cursor.getColumnIndex("id"),
-                    cursor.getString("titulo"),
-                    cursor.getString("texto")
-                    )));
+        while (!cursor.isAfterLast()) {
+            Nota n = new Nota(cursor.getInt(0), cursor.getString(1), cursor.getString(2));
+            arrayList.add(n);
+            cursor.moveToNext();
         }
+        return arrayList;
     }
 }
