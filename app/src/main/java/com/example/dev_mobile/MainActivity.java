@@ -1,19 +1,32 @@
 package com.example.dev_mobile;
 
+import static androidx.constraintlayout.widget.ConstraintLayoutStates.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
+import android.util.Log;
+
+import com.example.dev_mobile.controller.AlimentoController;
+import com.example.dev_mobile.modelo.Alimento;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    private AlimentoController alimentoController;
+    private RecyclerView recyclerView;
+    private AlimentoAdapter alimentoAdapter;
+    private List<Alimento> alimentos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +35,20 @@ public class MainActivity extends AppCompatActivity {
 //        SQLiteDatabase db = openOrCreateDatabase("dbTaco", Context.MODE_PRIVATE, null);
 
         executarAssetSQL();
+
+        alimentoController = new AlimentoController(this);
+        alimentos = alimentoController.getAllAlimentos();
+
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        alimentoAdapter = new AlimentoAdapter(alimentos, new AlimentoAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Alimento alimento) {
+                // Handle item click event, navigate to a new activity or fragment to display detailed information
+                // Pass the selected Alimento object to the new activity or fragment
+            }
+        });
+        recyclerView.setAdapter(alimentoAdapter);
     }
 
     private void executarAssetSQL() { //"taco_4_edicao.sql"
@@ -50,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (linha.trim().endsWith(";")) {
                     String statement = comandoSQL.toString().trim();
+                    Log.i(TAG, "executarAssetSQL: " + statement);
                     db.execSQL(statement);
                     comandoSQL.setLength(0);
                 }

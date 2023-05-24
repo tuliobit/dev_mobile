@@ -1,41 +1,36 @@
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+CREATE TABLE IF NOT EXISTS taco_4_edicao (
+  id INTEGER PRIMARY KEY,
+  Categoria TEXT,
+  Alimento TEXT,
+  Umidade TEXT,
+  Energiakcal TEXT,
+  kJ TEXT,
+  Proteinag TEXT,
+  Lipideosg TEXT,
+  Colesterolmg TEXT,
+  Carboidratosg TEXT,
+  FibraAlimentarg TEXT,
+  Cinzasg TEXT,
+  Calciomg TEXT,
+  Magnesiomg TEXT,
+  Manganesmg TEXT,
+  Fósforomg TEXT,
+  Ferromg TEXT,
+  Sódiomg TEXT,
+  Potassiomg TEXT,
+  Cobremg TEXT,
+  Zincomg TEXT,
+  Retinolmcg TEXT,
+  REmcg TEXT,
+  RAEmcg TEXT,
+  Tiaminamg TEXT,
+  Riboflavinamg TEXT,
+  Piridoxinamg TEXT,
+  Niacinamg TEXT,
+  VitaminaCmg TEXT
+);
 
-CREATE TABLE `taco_4___edicao` (
-  `id` int DEFAULT NULL,
-  `Categoria` varchar(37) DEFAULT NULL,
-  `Alimento` varchar(64) DEFAULT NULL,
-  `Unidade` varchar(4) DEFAULT NULL,
-  `Energiakcal` varchar(3) DEFAULT NULL,
-  `kJ` varchar(4) DEFAULT NULL,
-  `Proteinag` varchar(4) DEFAULT NULL,
-  `Lipideosg` varchar(5) DEFAULT NULL,
-  `Colesterolmg` varchar(4) DEFAULT NULL,
-  `Carboidratosg` varchar(4) DEFAULT NULL,
-  `FibraAlimentarg` varchar(4) DEFAULT NULL,
-  `Cinzasg` varchar(4) DEFAULT NULL,
-  `Calciomg` varchar(4) DEFAULT NULL,
-  `Magnesiomg` varchar(3) DEFAULT NULL,
-  `Manganesmg` varchar(5) DEFAULT NULL,
-  `Fósforomg` varchar(4) DEFAULT NULL,
-  `Ferromg` varchar(4) DEFAULT NULL,
-  `Sódiomg` varchar(5) DEFAULT NULL,
-  `Potassiomg` varchar(5) DEFAULT NULL,
-  `Cobremg` varchar(5) DEFAULT NULL,
-  `Zincomg` varchar(4) DEFAULT NULL,
-  `Retinolmcg` varchar(5) DEFAULT NULL,
-  `REmcg` varchar(5) DEFAULT NULL,
-  `RAEmcg` varchar(5) DEFAULT NULL,
-  `Tiaminamg` varchar(4) DEFAULT NULL,
-  `Riboflavinamg` varchar(4) DEFAULT NULL,
-  `Piridoxinamg` varchar(5) DEFAULT NULL,
-  `Niacinamg` varchar(5) DEFAULT NULL,
-  `VitaminaCmg` varchar(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-
-
-INSERT INTO `taco_4___edicao` (`id`, `Categoria`, `Alimento`, `Unidade`, `Energiakcal`, `kJ`, `Proteinag`, `Lipideosg`, `Colesterolmg`, `Carboidratosg`, `FibraAlimentarg`, `Cinzasg`, `Calciomg`, `Magnesiomg`, `Manganesmg`, `Fósforomg`, `Ferromg`, `Sódiomg`, `Potassiomg`, `Cobremg`, `Zincomg`, `Retinolmcg`, `REmcg`, `RAEmcg`, `Tiaminamg`, `Riboflavinamg`, `Piridoxinamg`, `Niacinamg`, `VitaminaCmg`) VALUES
+INSERT INTO `taco_4_edicao` (`id`, `Categoria`, `Alimento`, `Umidade`, `Energiakcal`, `kJ`, `Proteinag`, `Lipideosg`, `Colesterolmg`, `Carboidratosg`, `FibraAlimentarg`, `Cinzasg`, `Calciomg`, `Magnesiomg`, `Manganesmg`, `Fósforomg`, `Ferromg`, `Sódiomg`, `Potassiomg`, `Cobremg`, `Zincomg`, `Retinolmcg`, `REmcg`, `RAEmcg`, `Tiaminamg`, `Riboflavinamg`, `Piridoxinamg`, `Niacinamg`, `VitaminaCmg`) VALUES
 (1, 'Cereais e derivados', 'Arroz, integral, cozido', '70,1', '124', '517', '2,6', '1,0', 'NA', '25,8', '2,7', '0,5', '5', '59', '0,63', '106', '0,3', '1', '75', '0,02', '0,7', 'NA', '', '', '0,08', 'Tr', '0,08', 'Tr', ''),
 (2, 'Cereais e derivados', 'Arroz, integral, cru', '12,2', '360', '1505', '7,3', '1,9', 'NA', '77,5', '4,8', '1,2', '8', '110', '2,99', '251', '0,9', '2', '173', '0,07', '1,4', 'NA', '', '', '0,26', 'Tr', '0,18', '4,18', ''),
 (3, 'Cereais e derivados', 'Arroz, tipo 1, cozido', '69,1', '128', '537', '2,5', '0,2', 'NA', '28,1', '1,6', '0,1', '4', '2', '0,30', '18', '0,1', '1', '15', '0,02', '0,5', 'NA', '', '', 'Tr', 'Tr', 'Tr', 'Tr', ''),
@@ -249,7 +244,7 @@ INSERT INTO `taco_4___edicao` (`id`, `Categoria`, `Alimento`, `Unidade`, `Energi
 (211, 'Frutas e derivados', 'Laranja, da terra, suco', '89,2', '41', '171', '0,7', '0,1', 'NA', '9,6', '1,0', '0,4', '13', '10', '0,02', '15', '0,1', 'Tr', '145', '0,02', '0,1', 'NA', '4', '2', '0,04', 'Tr', '0,04', 'Tr', '44,3'),
 (212, 'Frutas e derivados', 'Laranja, lima, crua', '87,0', '46', '191', '1,1', '0,1', 'NA', '11,5', '1,8', '0,4', '31', '10', '0,05', '15', '0,1', '1', '130', '0,03', '0,1', 'NA', '', '', '0,09', '0,05', '0,04', 'Tr', '43,5'),
 (213, 'Frutas e derivados', 'Laranja, lima, suco', '89,7', '39', '165', '0,7', '0,1', 'NA', '9,2', '0,4', '0,3', '8', '11', '0,02', '16', 'Tr', 'Tr', '129', '0,02', '0,0', 'NA', '', '', '0,10', '0,03', '0,04', 'Tr', '41,3');
-INSERT INTO `taco_4___edicao` (`id`, `Categoria`, `Alimento`, `Unidade`, `Energiakcal`, `kJ`, `Proteinag`, `Lipideosg`, `Colesterolmg`, `Carboidratosg`, `FibraAlimentarg`, `Cinzasg`, `Calciomg`, `Magnesiomg`, `Manganesmg`, `Fósforomg`, `Ferromg`, `Sódiomg`, `Potassiomg`, `Cobremg`, `Zincomg`, `Retinolmcg`, `REmcg`, `RAEmcg`, `Tiaminamg`, `Riboflavinamg`, `Piridoxinamg`, `Niacinamg`, `VitaminaCmg`) VALUES
+INSERT INTO `taco_4_edicao` (`id`, `Categoria`, `Alimento`, `Umidade`, `Energiakcal`, `kJ`, `Proteinag`, `Lipideosg`, `Colesterolmg`, `Carboidratosg`, `FibraAlimentarg`, `Cinzasg`, `Calciomg`, `Magnesiomg`, `Manganesmg`, `Fósforomg`, `Ferromg`, `Sódiomg`, `Potassiomg`, `Cobremg`, `Zincomg`, `Retinolmcg`, `REmcg`, `RAEmcg`, `Tiaminamg`, `Riboflavinamg`, `Piridoxinamg`, `Niacinamg`, `VitaminaCmg`) VALUES
 (214, 'Frutas e derivados', 'Laranja, pêra, crua', '89,6', '37', '154', '1,0', '0,1', 'NA', '8,9', '0,8', '0,3', '22', '9', '0,05', '23', '0,1', 'Tr', '163', '0,03', '0,1', 'NA', '1', '0', '0,07', '0,02', '0,02', 'Tr', '53,7'),
 (215, 'Frutas e derivados', 'Laranja, pêra, suco', '91,3', '33', '137', '0,7', '0,1', 'NA', '7,6', 'Tr', '0,3', '7', '8', '0,03', '14', 'Tr', 'Tr', '149', '0,01', 'Tr', 'NA', '1', '1', 'Tr', 'Tr', 'Tr', 'Tr', '73,3'),
 (216, 'Frutas e derivados', 'Laranja, valência, crua', '86,9', '46', '193', '0,8', '0,2', 'NA', '11,7', '1,7', '0,4', '34', '14', '0,06', '20', '0,1', '1', '158', '0,04', '0,1', 'NA', '', '', '0,07', '0,04', '0,03', 'Tr', '47,8'),
@@ -462,7 +457,7 @@ INSERT INTO `taco_4___edicao` (`id`, `Categoria`, `Alimento`, `Unidade`, `Energi
 (423, 'Carnes e derivados', 'Lingüiça, porco, grelhada', '50,5', '296', '1241', '23,2', '21,9', '82', '0,0', 'NA', '4,0', '8', '19', '0,01', '210', '1,0', '1456', '427', '0,07', '3,5', 'Tr', '', '', '0,40', '0,07', 'Tr', '6,60', ''),
 (424, 'Carnes e derivados', 'Mortadela', '56,4', '269', '1125', '12,0', '21,6', '83', '5,8', 'NA', '4,1', '67', '19', '0,11', '216', '1,5', '1212', '247', '0,08', '1,0', '25', '', '', '0,14', '0,06', 'Tr', '3,00', ''),
 (425, 'Carnes e derivados', 'Peru, congelado, assado', '65,3', '163', '682', '26,2', '5,7', '91', '0,0', 'NA', '2,2', '14', '12', '0,02', '197', '0,6', '628', '175', '0,03', '1,2', 'Tr', 'Tr', 'Tr', '0,06', 'Tr', 'Tr', '6,23', '');
-INSERT INTO `taco_4___edicao` (`id`, `Categoria`, `Alimento`, `Unidade`, `Energiakcal`, `kJ`, `Proteinag`, `Lipideosg`, `Colesterolmg`, `Carboidratosg`, `FibraAlimentarg`, `Cinzasg`, `Calciomg`, `Magnesiomg`, `Manganesmg`, `Fósforomg`, `Ferromg`, `Sódiomg`, `Potassiomg`, `Cobremg`, `Zincomg`, `Retinolmcg`, `REmcg`, `RAEmcg`, `Tiaminamg`, `Riboflavinamg`, `Piridoxinamg`, `Niacinamg`, `VitaminaCmg`) VALUES
+INSERT INTO `taco_4_edicao` (`id`, `Categoria`, `Alimento`, `Umidade`, `Energiakcal`, `kJ`, `Proteinag`, `Lipideosg`, `Colesterolmg`, `Carboidratosg`, `FibraAlimentarg`, `Cinzasg`, `Calciomg`, `Magnesiomg`, `Manganesmg`, `Fósforomg`, `Ferromg`, `Sódiomg`, `Potassiomg`, `Cobremg`, `Zincomg`, `Retinolmcg`, `REmcg`, `RAEmcg`, `Tiaminamg`, `Riboflavinamg`, `Piridoxinamg`, `Niacinamg`, `VitaminaCmg`) VALUES
 (426, 'Carnes e derivados', 'Peru, congelado, cru', '78,2', '94', '392', '18,1', '1,8', '68', '0,0', 'NA', '2,5', '10', '19', 'Tr', '217', '0,9', '711', '281', '0,36', '1,4', 'Tr', 'Tr', 'Tr', '0,06', 'Tr', 'Tr', '4,23', ''),
 (427, 'Carnes e derivados', 'Porco, bisteca, crua', '67,7', '164', '687', '21,5', '8,0', '56', '0,0', 'NA', '1,0', '6', '24', 'Tr', '195', '0,5', '54', '335', '0,07', '1,4', 'Tr', 'Tr', 'Tr', '0,90', 'Tr', 'Tr', '2,65', ''),
 (428, 'Carnes e derivados', 'Porco, bisteca, frita', '47,3', '311', '1302', '33,7', '18,5', '126', '0,0', 'NA', '1,6', '69', '29', '0,01', '290', '0,8', '63', '404', '0,07', '2,2', '10', '10', '10', '0,34', 'Tr', 'Tr', '3,25', ''),
@@ -635,4 +630,3 @@ INSERT INTO `taco_4___edicao` (`id`, `Categoria`, `Alimento`, `Unidade`, `Energi
 (595, 'Nozes e sementes', 'Pinhão, cozido', '50,5', '174', '730', '3,0', '0,7', 'NA', '43,9', '15,6', '1,8', '16', '53', '0,41', '166', '0,8', '1', '727', '0,18', '0,8', 'NA', '', '', 'Tr', 'Tr', 'Tr', 'Tr', '27,7'),
 (596, 'Nozes e sementes', 'Pupunha, cozida', '54,5', '219', '914', '2,5', '12,8', 'NA', '29,6', '4,3', '0,7', '28', '25', '0,13', '49', '0,5', '1', '303', '0,28', '0,3', 'NA', '875', '438', 'Tr', '0,09', '0,03', 'Tr', '2,2'),
 (597, 'Nozes e sementes', 'Noz, crua', '6,2', '620', '2594', '14,0', '59,4', 'NA', '18,4', '7,2', '2,1', '105', '153', '4,05', '396', '2,0', '5', '533', '0,75', '2,1', 'NA', '', '', '0,38', 'Tr', '0,13', '1,08', 'Tr');
-COMMIT;

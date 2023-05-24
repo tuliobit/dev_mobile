@@ -11,11 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AlimentoController extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "dbTaco";
-    private static final String TABLE_NAME = "taco_4___edicao";
-
     public AlimentoController(Context context) {
-        super(context, DATABASE_NAME, null, 1);
+        super(context, "dbTaco", null, 1);
     }
 
     @Override
@@ -32,7 +29,7 @@ public class AlimentoController extends SQLiteOpenHelper {
         List<Alimento> alimentos = new ArrayList<>();
 
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        Cursor cursor = db.rawQuery("SELECT * FROM taco_4_edicao", null);
 
         if (cursor.moveToFirst()) {
             do {

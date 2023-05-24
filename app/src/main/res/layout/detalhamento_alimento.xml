@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Codigo: " />
+
+    <TextView
+        android:id="@+id/tvCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categoria: " />
+
+    <TextView
+        android:id="@+id/tvAlimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alimento: " />
+
+    <TextView
+        android:id="@+id/tvUmidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Umidade: " />
+
+    <TextView
+        android:id="@+id/tvEnergiakcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Energiakcal: " />
+
+    <TextView
+        android:id="@+id/tvKJ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kJ: " />
+
+    <TextView
+        android:id="@+id/tvProteinag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proteinag: " />
+
+    <TextView
+        android:id="@+id/tvLipideosg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lipideosg: " />
+
+    <TextView
+        android:id="@+id/tvColesterolmg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Colesterolmg: " />
+
+    <TextView
+        android:id="@+id/tvCarboidratosg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carboidratosg: " />
+
+    <TextView
+        android:id="@+id/tvFibraAlimentarg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FibraAlimentarg: " />
+
+    <TextView
+        android:id="@+id/tvCinzasg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cinzasg: " />
+    <TextView
+        android:id="@+id/tvCalciomg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calciomg: " />
+    <TextView
+        android:id="@+id/tvMagnesiomg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Magnesiomg: " />
+    <TextView
+        android:id="@+id/tvManganesmg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manganesmg: " />
+    <TextView
+        android:id="@+id/tvFósforomg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fósforomg: " />
+    <TextView
+        android:id="@+id/tvFerromg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ferromg: " />
+    <TextView
+        android:id="@+id/tvSódiomg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sódiomg: " />
+
+    <TextView
+        android:id="@+id/tvPotassiomg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Potassiomg: " />
+
+    <TextView
+        android:id="@+id/tvCobremg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cobremg: " />
+
+    <TextView
+        android:id="@+id/tvZincomg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zincomg: " />
+
+    <TextView
+        android:id="@+id/tvRetinolmcg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retinolmcg: " />
+
+    <TextView
+        android:id="@+id/tvREmcg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REmcg: " />
+
+    <TextView
+        android:id="@+id/tvRAEmcg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RAEmcg: " />
+    <TextView
+        android:id="@+id/tvTiaminamg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiaminamg: " />
+    <TextView
+        android:id="@+id/tvRiboflavinamg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Riboflavinamg: " />
+
+    <TextView
+        android:id="@+id/tvPiridoxinamg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Piridoxinamg: " />
+
+    <TextView
+        android:id="@+id/tvNiacinamg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Niacinamg: " />
+
+    <TextView
+        android:id="@+id/tvVitaminaCmg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VitaminaCmg: " />
+
+</LinearLayout>
