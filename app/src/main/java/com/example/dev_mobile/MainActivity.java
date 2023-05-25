@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
@@ -44,8 +45,9 @@ public class MainActivity extends AppCompatActivity {
         alimentoAdapter = new AlimentoAdapter(alimentos, new AlimentoAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Alimento alimento) {
-                // Handle item click event, navigate to a new activity or fragment to display detailed information
-                // Pass the selected Alimento object to the new activity or fragment
+                Intent intent = new Intent(MainActivity.this, ActivityDetalhaAlimento.class);
+                intent.putExtra("alimento_selecionado", alimento);
+                startActivity(intent);
             }
         });
         recyclerView.setAdapter(alimentoAdapter);

@@ -92,7 +92,7 @@
         android:layout_height="wrap_content"
         android:text="Manganesmg: " />
     <TextView
-        android:id="@+id/tvFósforomg"
+        android:id="@+id/tvFosforomg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fósforomg: " />
@@ -102,7 +102,7 @@
         android:layout_height="wrap_content"
         android:text="Ferromg: " />
     <TextView
-        android:id="@+id/tvSódiomg"
+        android:id="@+id/tvSodiomg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sódiomg: " />
