@@ -13,9 +13,11 @@ import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.example.dev_mobile.controller.AlimentoController;
 import com.example.dev_mobile.modelo.Alimento;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private AlimentoAdapter alimentoAdapter;
     private List<Alimento> alimentos;
+    private FloatingActionButton fabSearch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +54,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         recyclerView.setAdapter(alimentoAdapter);
+
+        // Botao de pesquisa
+        fabSearch = findViewById(R.id.fabSearch);
+        fabSearch.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                inicializaBusca();
+            }
+        });
     }
 
     private void executarAssetSQL() { //"taco_4_edicao.sql"
@@ -90,6 +103,12 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException | SQLiteException e) {
             e.printStackTrace();
         }
+    }
+
+    private void inicializaBusca() {
+        // TODO
+        // Chamar outra activity com pesquisa?
+        // Ou filtrar pela RecyclerView?
     }
 
 }
