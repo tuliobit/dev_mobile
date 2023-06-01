@@ -25,14 +25,15 @@ public class MainActivity extends AppCompatActivity {
         mSensorManager.registerListener(new SensorEventListener() {
             @Override
             public void onSensorChanged(SensorEvent sensorEvent) {
-                int sensorType = sensorEvent.sensor.getType();
-                tvLightSensor.setText(Float.toString(sensorType));
+//                int sensorType = sensorEvent.sensor.getType();
+                float lightValue = sensorEvent.values[0];
+                tvLightSensor.setText(Float.toString(lightValue));
             }
 
             @Override
             public void onAccuracyChanged(Sensor sensor, int i) {
 
             }
-        }, mSensor, SensorManager.SENSOR_DELAY_NORMAL);
+        }, mSensor, SensorManager.SENSOR_DELAY_FASTEST);
     }
 }
