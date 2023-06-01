@@ -1,15 +1,22 @@
 package com.example.dev_mobile;
 
-import android.graphics.Paint;
-import android.graphics.Path;
+        import android.graphics.Paint;
+        import android.graphics.Path;
 
 public class Traco {
-    Paint mPaint;
-    Path mPath;
+    private Paint mPaint;
+    private Path mPath;
 
-    public void SimplePaint() {
-        mPaint = new Paint();
-        mPath = new Path();
+    public Traco(Path path, Paint paint) {
+        mPath = path;
+        mPaint = new Paint(paint);
+    }
 
+    public Paint getPaint() {
+        return mPaint;
+    }
+
+    public Path getPath() {
+        return mPath;
     }
 }
